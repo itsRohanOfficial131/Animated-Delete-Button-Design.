@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+}
+
+.box {
+    width: 200px;
+    height: 250px;
+    border: 2px solid var(--icon, #ffffff);
+    border-radius: 10px 10px 40px 40px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: border-color 0.3s;
+}
+
+.box::before,
+.box::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 200px;
+    top: 0;
+    left: 50%;
+    background: linear-gradient(45deg, #ffffff, transparent);
+    transform: translateX(-50%);
+}
